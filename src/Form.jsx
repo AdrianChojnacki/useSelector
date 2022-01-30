@@ -25,7 +25,7 @@ const Form = ({
       author: authorInput,
       comment: commentInput,
       id,
-      rate: rateInput,
+      rate: Number(rateInput),
     };
 
     console.log(rateObject);
@@ -34,7 +34,7 @@ const Form = ({
   }
 
   return (
-    <form onSubmit={}>
+    <form onSubmit={handleOnSubmit}>
       <div>
         <label>
           Autor:
