@@ -1,11 +1,16 @@
 import React from 'react';
+import { Provider } from 'react-redux';
+
+import store from './store/store';
 
 const App = () => {
   return (
-    <div>
-      <h1>BLABALBLA</h1>
-      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo temporibus, eveniet quaerat vitae corrupti odio, autem ab eligendi ut, aliquam aliquid. Nihil est fugiat laborum labore quasi repellendus a delectus!</p>
-    </div>
+    <Provider store={store}>
+      <div>
+        <h1>BLABALBLA</h1>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+      </div>
+    </Provider>
   )
 }
 
