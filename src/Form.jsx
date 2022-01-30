@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 
 const Form = ({
   author = '',
+  callback,
   comment = '',
   id,
   rate = 0,
@@ -31,6 +32,10 @@ const Form = ({
     console.log(rateObject);
 
     id ? console.log('Edycja oceny') : console.log('Dodaj ocenę');
+
+    if (id) {
+      callback();
+    }
   }
 
   return (
