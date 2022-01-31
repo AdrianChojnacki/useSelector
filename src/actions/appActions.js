@@ -7,7 +7,7 @@ export const addRate = ({author, comment, rate}) => ({
   payload: {
     author,
     comment,
-    id: Math.floor(Math.random * 1234),
+    id: Math.floor(Math.random() * 1234),
     rate,
   }
 });

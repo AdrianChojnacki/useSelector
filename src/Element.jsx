@@ -18,7 +18,7 @@ const Element = ({ author, comment, id, rate }) => {
       />
     ) : (
       <button onClick={toggleElements}>
-        Edytuj książkę
+        Edytuj ocenę
       </button>
     );
 
