@@ -1,9 +1,10 @@
 import React from 'react';
+import { connect } from 'react-redux';
 
 import Element from './Element';
 
-const List = ({ rates }) => {
-  const ratesElements = rates.map(rate => (
+const List = ({ ratesInProps }) => {
+  const ratesElements = ratesInProps.map(rate => (
     <Element key={rate.id} {...rate} />
   ));
 
@@ -14,4 +15,10 @@ const List = ({ rates }) => {
   );
 };
 
-export default List;
+const connectReduxStateToProps = store => ({
+  ratesInProps: store.ratesFromReducer,
+});
+
+const ListConsumer = connect(connectReduxStateToProps)(List);
+
+export default ListConsumer;
