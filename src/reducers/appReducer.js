@@ -3,6 +3,7 @@ import {
 } from '../actions/appActions';
 
 const appReducer = (state = [], action) => {
+  console.log('Będziemy tworzyć nowy stan aplikacji :)');
   switch (action.type) {
     case ADD:
       return [ ...state, action.payload ];
