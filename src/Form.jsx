@@ -23,10 +23,6 @@ const Form = ({
   const handleOnSubmit = event => {
     event.preventDefault();
 
-    // if (!authorInput.length) {
-    //   return;
-    // }
-
     const rateObject = {
       author: authorInput,
       comment: commentInput,
