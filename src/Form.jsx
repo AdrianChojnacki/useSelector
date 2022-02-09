@@ -80,11 +80,4 @@ const Form = ({
   );
 }
 
-const connectActionsToProps = ({
-  addRate,
-  editRate,
-});
-
-const FormConsumer = connect(null, connectActionsToProps)(Form);
-
-export default FormConsumer;
+export default Form;
